@@ -1,9 +1,27 @@
+import matrix.*
 
+describe "La historia de los tripulantes" {
 
-describe "group of tests " {
+  test "Neo salta" {
+    neo.saltar()
+    assert.equals(50, neo.energia())
+  }
 
-  test "test 01" {
-    assert.equals(100, 50+50)
+  test "description" {
+    assert.notEquals(10, trinity.vitalidad())
+  }
+
+  test "La nave choca" {
+    nave.chocar()
+    assert.equals(0, nave.cantidadDePasajeros())
+  }
+
+  test "Neo es el elegido" {
+    assert.that(neo.esElElegido())
+  }
+
+  test "Morfeo no es el elegido" {
+    assert.notThat(morfeo.esElElegido())
   }
 
 }
